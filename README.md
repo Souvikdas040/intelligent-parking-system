@@ -127,3 +127,8 @@ Optional / Future Integrations (outside main box):
                         ▼
                  Spring Boot App
 ```
+
+---
+
+## ER Diagram & Workflow
+
