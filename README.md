@@ -132,3 +132,4 @@ Optional / Future Integrations (outside main box):
 
 ## ER Diagram & Workflow
 
+[Figure](docs\er-diagram.png)
