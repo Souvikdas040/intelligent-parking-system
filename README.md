@@ -77,4 +77,53 @@ High-level layers:
 You can include a simple architecture diagram here:
 
 ```text
-[Browser UI] ⇄ [Spring Boot REST API] ⇄ [ParkingManager Service] ⇄ [JPA Repositories] ⇄ [Database]
+                ┌───────────────────────┐
+                │   Browser Dashboard   │
+                │  (HTML + Tailwind +   │
+                │     JavaScript)       │
+                └──────────┬────────────┘
+                           │  HTTP (REST)
+                           │
+                ┌──────────▼────────────┐
+                │   Spring Boot App     │
+                │  (Intelligent Parking │
+                │        System)        │
+                └──────────┬────────────┘
+                           │
+      ┌────────────────────┼────────────────────┐
+      │                    │                    │
+┌─────▼─────┐       ┌──────▼───────┐      ┌─────▼─────┐
+│ Controller│       │  Service     │      │  Repos /  │
+│  Layer    │       │  Layer       │      │  DAO      │
+│(REST APIs)│       │ ParkingManager│      │(JPA Repos)│
+└─────┬─────┘       └──────┬───────┘      └─────┬─────┘
+      │                    │                    │
+      │ calls              │ business logic     │ CRUD
+      │                    │                    │
+      │              ┌─────▼─────┐              │
+      │              │   Model   │              │
+      │              │ Entities  │              │
+      │              │(Vehicle,  │              │
+      │              │ParkingSlot│              │
+      │              └─────┬─────┘              │
+      │                    │                    │
+      └────────────────────┼────────────────────┘
+                           │
+                     ┌─────▼──────┐
+                     │  Database  │
+                     │ (H2/MySQL) │
+                     └────────────┘
+
+
+Optional / Future Integrations (outside main box):
+
+   ┌──────────────────┐        ┌───────────────────┐
+   │   Mobile App     │        │  IoT Sensors      │
+   │(User Booking UI) │        │(Slot Occupancy)   │
+   └───────┬──────────┘        └─────────┬────────┘
+           │  REST APIs / MQTT           │
+           └────────────┬────────────────┘
+                        │
+                        ▼
+                Spring Boot App
+```
