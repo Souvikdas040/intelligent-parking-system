@@ -76,7 +76,7 @@ High-level layers:
 
 You can include a simple architecture diagram here:
 
-```text
+```kotlin
                 ┌───────────────────────┐
                 │   Browser Dashboard   │
                 │  (HTML + Tailwind +   │
@@ -92,22 +92,22 @@ You can include a simple architecture diagram here:
                            │
       ┌────────────────────┼────────────────────┐
       │                    │                    │
-┌─────▼─────┐       ┌──────▼───────┐      ┌─────▼─────┐
-│ Controller│       │  Service     │      │  Repos /  │
-│  Layer    │       │  Layer       │      │  DAO      │
+┌─────▼─────┐       ┌──────▼────────┐      ┌─────▼─────┐
+│ Controller│       │  Service      │      │  Repos /  │
+│  Layer    │       │  Layer        │      │  DAO      │
 │(REST APIs)│       │ ParkingManager│      │(JPA Repos)│
-└─────┬─────┘       └──────┬───────┘      └─────┬─────┘
-      │                    │                    │
-      │ calls              │ business logic     │ CRUD
-      │                    │                    │
-      │              ┌─────▼─────┐              │
-      │              │   Model   │              │
-      │              │ Entities  │              │
-      │              │(Vehicle,  │              │
-      │              │ParkingSlot│              │
-      │              └─────┬─────┘              │
-      │                    │                    │
-      └────────────────────┼────────────────────┘
+└─────┬─────┘       └──────┬────────┘      └─────┬─────┘
+      │                    │                     │
+      │ calls              │ business logic      │ CRUD
+      │                    │                     │
+      │              ┌─────▼─────┐               │
+      │              │   Model   │               │
+      │              │ Entities  │               │
+      │              │(Vehicle,  │               │
+      │              │ParkingSlot│               │
+      │              └─────┬─────┘               │
+      │                    │                     │
+      └────────────────────┼─────────────────────┘
                            │
                      ┌─────▼──────┐
                      │  Database  │
@@ -120,10 +120,10 @@ Optional / Future Integrations (outside main box):
    ┌──────────────────┐        ┌───────────────────┐
    │   Mobile App     │        │  IoT Sensors      │
    │(User Booking UI) │        │(Slot Occupancy)   │
-   └───────┬──────────┘        └─────────┬────────┘
-           │  REST APIs / MQTT           │
+   └───────┬──────────┘        └─────────┬─────────┘
+           │       REST APIs / MQTT      │
            └────────────┬────────────────┘
                         │
                         ▼
-                Spring Boot App
+                 Spring Boot App
 ```
