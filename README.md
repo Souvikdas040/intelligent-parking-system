@@ -153,3 +153,10 @@ Optional / Future Integrations (outside main box):
 
   - `Vehicle` parked_in `ParkingSlot`
     → One-to-One relationship (a slot holds at most one vehicle at a time).
+
+The diagram also illustrates the workflow:
+
+1. Vehicle arrives and sends a park request.
+2. System finds optimal slot based on type and availability.
+3. Vehicle is assigned to the slot and status is updated.
+4. On exit, vehicle is unparked, slot is released, and (optionally) fee is computed.
