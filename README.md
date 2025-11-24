@@ -133,6 +133,7 @@ Optional / Future Integrations (outside main box):
 ## ER Diagram & Workflow
 
 ![Figure](./docs/er-diagram.png)
+**Fig.:** ER Diagram and Workflow of Intelligent Parking System
 
 **Entities**
 
