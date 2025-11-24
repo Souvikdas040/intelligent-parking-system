@@ -160,3 +160,15 @@ The diagram also illustrates the workflow:
 2. System finds optimal slot based on type and availability.
 3. Vehicle is assigned to the slot and status is updated.
 4. On exit, vehicle is unparked, slot is released, and (optionally) fee is computed.
+
+---
+
+## Tech Stack
+
+- **Language:** Java
+- **Backend Framework:** Spring Boot
+- **Build Tool:** Maven
+- **Persistence:** Spring Data JPA
+- **Database:** H2 (default) or MySQL
+- **Frontend:** HTML5, Tailwind CSS, Vanilla JavaScript
+- **Other:** Lombok (optional), Jakarta Persistence annotations
