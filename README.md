@@ -137,19 +137,19 @@ Optional / Future Integrations (outside main box):
 **Entities**
 
   - Vehicle
-    - licensePlate (PK)
-    - vehicleType
-    - entryTime
-    - assignedSlotId
+    - `licensePlate` (PK)
+    - `vehicleType`
+    - `entryTime`
+    - `assignedSlotId`
 
   - ParkingSlot
-    - slotId (PK)
-    - slotSize
-    - isOccupied
-    - isReserved
-    - vehicle (FK → Vehicle.licensePlate)
+    - `slotId` (PK)
+    - `slotSize`
+    - `isOccupied`
+    - `isReserved`
+    - `vehicle` (FK → `Vehicle.licensePlate`)
 
 **Relationship**
 
-  - Vehicle parked_in ParkingSlot
+  - `Vehicle` parked_in `ParkingSlot`
     → One-to-One relationship (a slot holds at most one vehicle at a time).
