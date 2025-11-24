@@ -133,3 +133,23 @@ Optional / Future Integrations (outside main box):
 ## ER Diagram & Workflow
 
 ![Figure](./docs/er-diagram.png)
+
+**Entities**
+
+  - Vehicle
+    - licensePlate (PK)
+    - vehicleType
+    - entryTime
+    - assignedSlotId
+
+  - ParkingSlot
+    - slotId (PK)
+    - slotSize
+    - isOccupied
+    - isReserved
+    - vehicle (FK → Vehicle.licensePlate)
+
+**Relationship**
+
+  - Vehicle parked_in ParkingSlot
+    → One-to-One relationship (a slot holds at most one vehicle at a time).
