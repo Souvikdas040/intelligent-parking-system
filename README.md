@@ -178,7 +178,7 @@ The diagram also illustrates the workflow:
 
 ## Getting Started
 
-**#Prerequisites**
+**# Prerequisites**
   - Java 17 or later
   - Maven 3.x
   - (Optional) Node.js if you want to build Tailwind via CLI
