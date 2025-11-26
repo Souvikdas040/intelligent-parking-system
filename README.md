@@ -407,11 +407,11 @@ Tests can verify:
 ---
 
 ## Future Enhancements
-- ⛓ IoT Integration: Connect physical sensors to update occupancy automatically.
-- 📱 Mobile App: Let users check & reserve slots from anywhere.
-- 💳 Payment Gateway: Calculate parking fees and complete transactions online.
-- 📊 Analytics Dashboard: Charts for peak hours, occupancy rate, and revenue.
-- 🏢 Multi-Lot / Multi-Level Support: Manage several parking locations centrally.
+- ⛓ **IoT Integration:** Connect physical sensors to update occupancy automatically.
+- 📱 **Mobile App:** Let users check & reserve slots from anywhere.
+- 💳 **Payment Gateway:** Calculate parking fees and complete transactions online.
+- 📊 **Analytics Dashboard:** Charts for peak hours, occupancy rate, and revenue.
+- 🏢 **Multi-Lot / Multi-Level Support:** Manage several parking locations centrally.
 
 ---
 
