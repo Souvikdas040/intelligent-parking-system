@@ -173,3 +173,21 @@ The diagram also illustrates the workflow:
 - **Database:** H2 (default) or MySQL
 - **Frontend:** HTML5, Tailwind CSS, Vanilla JavaScript
 - **Other:** Lombok (optional), Jakarta Persistence annotations
+
+---
+
+## Getting Started
+
+**Prerequisites**
+  - Java 17 or later
+  - Maven 3.x
+  - (Optional) Node.js if you want to build Tailwind via CLI
+  - Git
+  - A modern browser (Chrome / Edge / Firefox)
+
+**Clone the Repository**
+```bash
+git clone https://github.com/your-username/intelligent-parking-system.git
+cd intelligent-parking-system
+```
+
