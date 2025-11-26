@@ -3,6 +3,9 @@
 A Spring Boot–based **Intelligent Parking System** that digitally manages parking slots and vehicles.  
 It exposes REST APIs and includes a simple Tailwind CSS dashboard to visualize and control the parking lot in real time.
 
+![preview](./docs/screenshot.png)
+▸Preview
+
 ---
 
 ## 📘 Table of Contents
@@ -417,14 +420,12 @@ Tests can verify:
 
 ## License
 [Apache License](./LICENSE)
-
 Copyright (c) 2025 Souvik Das
 
 ---
 
 ## Author
 **Souvik Das**
-
 Full Stack Developer
 
 Feel free to connect on LinkedIn or GitHub once you publish this project.
