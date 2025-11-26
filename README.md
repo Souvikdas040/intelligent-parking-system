@@ -178,7 +178,7 @@ The diagram also illustrates the workflow:
 
 ## Getting Started
 
-**## Prerequisites**
+**Prerequisites**
   - Java 17 or later
   - Maven 3.x
   - (Optional) Node.js if you want to build Tailwind via CLI
@@ -207,3 +207,49 @@ spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=update
 spring.h2.console.enabled=true
 ```
+
+**Option 2 – MySQL (Persistent)**
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/parkingdb
+spring.datasource.username=root
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+Create the database ```parkingdb``` manually in MySQL before running.
+
+**Frontend / UI**
+- If Tailwind CSS files are already built, the HTML pages in ```src/main/resources/static/``` can be used directly.
+- If you want to modify styles with Tailwind:
+
+  1. Initialize a Tailwind project (optional – if not done already).
+  2. Run the Tailwind build script to generate the final CSS.
+  3. Ensure the generated CSS is referenced in your HTML (```static/css/tailwind.css``` or similar).
+
+---
+
+## Running the Application
+
+From the project root:
+```bash
+mvn spring-boot:run
+```
+
+Or build a jar:
+```bash
+mvn clean package
+java -jar target/intelligent-parking-system-*.jar
+```
+
+By default, the app will be available at:
+```bash
+http://localhost:8080
+```
+
+- API base URL: ```http://localhost:8080/api/parking``` (example)
+- UI dashboard: ```http://localhost:8080/``` (if mapped to static index.html)
+
+---
+
+## API Endpoints
