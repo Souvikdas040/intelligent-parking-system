@@ -199,7 +199,7 @@ cd intelligent-parking-system
 **Option 1 – H2 (In-Memory, default)**
 
 **In ```src/main/resources/application.properties```:**
-```vscode
+```properties
 spring.datasource.url=jdbc:h2:mem:parkingdb
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
