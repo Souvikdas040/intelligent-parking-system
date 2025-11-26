@@ -425,7 +425,7 @@ Copyright (c) 2025 Souvik Das
 ---
 
 ## Author
-**Souvik Das**
+**Souvik Das** 
 Full Stack Developer
 
 Feel free to connect on LinkedIn or GitHub once you publish this project.
