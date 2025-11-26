@@ -137,23 +137,23 @@ Optional / Future Integrations (outside main box):
 
 **Entities**
 
-  - Vehicle
-    - `licensePlate` (PK)
-    - `vehicleType`
-    - `entryTime`
-    - `assignedSlotId`
+- Vehicle
+  - `licensePlate` (PK)
+  - `vehicleType`
+  - `entryTime`
+  - `assignedSlotId`
 
-  - ParkingSlot
-    - `slotId` (PK)
-    - `slotSize`
-    - `isOccupied`
-    - `isReserved`
-    - `vehicle` (FK → `Vehicle.licensePlate`)
+- ParkingSlot
+  - `slotId` (PK)
+  - `slotSize`
+  - `isOccupied`
+  - `isReserved`
+  - `vehicle` (FK → `Vehicle.licensePlate`)
 
 **Relationship**
 
-  - `Vehicle` parked_in `ParkingSlot`
-    → One-to-One relationship (a slot holds at most one vehicle at a time).
+- `Vehicle` parked_in `ParkingSlot`
+  → One-to-One relationship (a slot holds at most one vehicle at a time).
 
 The diagram also illustrates the workflow:
 
@@ -187,7 +187,12 @@ The diagram also illustrates the workflow:
 
 **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/intelligent-parking-system.git
+git clone https://github.com/Souvikdas040/intelligent-parking-system.git
 cd intelligent-parking-system
 ```
+
+**Backend Setup**
+  1. Open the project in your IDE (IntelliJ / Eclipse / VS Code).
+  2. Ensure Maven downloads all dependencies.
+  3. Configure the database:
 
