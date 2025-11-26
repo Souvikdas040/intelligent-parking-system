@@ -365,6 +365,71 @@ intelligent-parking-system/
    └─ er-diagram-intelligent-parking-system.png
 ```
 
-------
+---
 
 ## How It Works
+
+### Parking Workflow
+1. User enters license plate and vehicle type in the UI.
+2. Frontend sends a ```POST /api/parking/park``` request.
+3. ```ParkingManager```:
+   - Validates the input.
+   - Searches for an available slot based on type and reservation rules.
+   - Creates/updates a ```Vehicle``` entity with ```entryTime```.
+   - Marks the chosen ```ParkingSlot``` as occupied and links it to the vehicle.
+4. Response is sent back with details of the assigned slot.
+5. UI displays a success message and updates the status grid.
+
+### Unparking Workflow
+1. User selects the slot or enters the license plate to unpark.
+2. Frontend calls ```POST /api/parking/unpark```.
+3. ```ParkingManager```:
+   - Validates that the slot/vehicle exists and is occupied.
+   - Retrieves the ```Vehicle``` and computes duration (for future fee logic).
+   - Clears the ```ParkingSlot```’s vehicle reference and marks it free.
+   - Deletes or archives the ```Vehicle``` record.
+4. UI updates to show the slot as free.
+
+---
+
+## Testing
+Run unit tests:
+```bash
+mvn test
+```
+
+Tests can verify:
+- Context loading
+- Slot initialization logic
+- Slot allocation for different vehicle types
+- Correct unpark behaviour and state updates
+
+---
+
+## Future Enhancements
+- ⛓ IoT Integration: Connect physical sensors to update occupancy automatically.
+- 📱 Mobile App: Let users check & reserve slots from anywhere.
+- 💳 Payment Gateway: Calculate parking fees and complete transactions online.
+- 📊 Analytics Dashboard: Charts for peak hours, occupancy rate, and revenue.
+- 🏢 Multi-Lot / Multi-Level Support: Manage several parking locations centrally.
+
+---
+
+## License
+This project is open-source.
+You can use any license you prefer, e.g.:
+
+```text
+MIT License
+Copyright (c) 2025 Souvik Das
+```
+
+---
+
+## Author
+**Souvik Das**
+Full Stack Developer
+
+Feel free to connect on LinkedIn or GitHub once you publish this project.
+
+---
