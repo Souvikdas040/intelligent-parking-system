@@ -420,7 +420,7 @@ This project is open-source.
 You can use any license you prefer, e.g.:
 
 ```text
-![Apache License](\LICENSE)
+![Apache License](./LICENSE)
 Copyright (c) 2025 Souvik Das
 ```
 
