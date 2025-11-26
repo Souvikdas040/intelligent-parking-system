@@ -46,15 +46,15 @@ The project is designed as a **learning-friendly** yet **industry-style** Spring
 
 ## Features
 
-- 🔹 **Digital Parking Lot Representation**
+- **Digital Parking Lot Representation**
   - Each slot is stored in the database with type, occupancy, and reservation status.
-- 🔹 **Automatic Slot Allocation**
+- **Automatic Slot Allocation**
   - Picks the most suitable free slot based on vehicle type and slot category.
-- 🔹 **Park / Unpark Operations**
+- **Park / Unpark Operations**
   - REST endpoints to park a vehicle and unpark it.
-- 🔹 **Real-Time Status Dashboard**
+- **Real-Time Status Dashboard**
   - Tailwind CSS UI to visualize slots (free/occupied/reserved).
-- 🔹 **Extensible Architecture**
+- **Extensible Architecture**
   - Service-oriented, ready for IoT, payment, and analytics integration.
 
 ---
@@ -196,3 +196,14 @@ cd intelligent-parking-system
   2. Ensure Maven downloads all dependencies.
   3. Configure the database:
 
+**Option 1 – H2 (In-Memory, default)**
+
+**In ```src/main/resources/application.properties```:**
+```code
+spring.datasource.url=jdbc:h2:mem:parkingdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+spring.h2.console.enabled=true
+```
