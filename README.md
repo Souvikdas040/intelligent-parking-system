@@ -243,7 +243,7 @@ java -jar target/intelligent-parking-system-*.jar
 ```
 
 By default, the app will be available at:
-```bash
+```test
 http://localhost:8080
 ```
 
@@ -253,3 +253,32 @@ http://localhost:8080
 ---
 
 ## API Endpoints
+
+**Get Parking Slot Status**
+```http
+GET /api/parking/status
+```
+
+**Response (200 OK)**
+```json
+[
+  {
+    "slotId": "S1",
+    "slotSize": "HANDICAP",
+    "occupied": true,
+    "reserved": true,
+    "vehicleLicense": "KA01AB1234"
+  },
+  {
+    "slotId": "S2",
+    "slotSize": "EV",
+    "occupied": false,
+    "reserved": true,
+    "vehicleLicense": null
+  }
+]
+```
+
+---
+
+## Park a Vehicle
