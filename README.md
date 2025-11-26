@@ -178,20 +178,20 @@ The diagram also illustrates the workflow:
 
 ## Getting Started
 
-**Prerequisites**
+### Prerequisites
   - Java 17 or later
   - Maven 3.x
   - (Optional) Node.js if you want to build Tailwind via CLI
   - Git
   - A modern browser (Chrome / Edge / Firefox)
 
-**Clone the Repository**
+### Clone the Repository
 ```bash
 git clone https://github.com/Souvikdas040/intelligent-parking-system.git
 cd intelligent-parking-system
 ```
 
-**Backend Setup**
+### Backend Setup
   1. Open the project in your IDE (IntelliJ / Eclipse / VS Code).
   2. Ensure Maven downloads all dependencies.
   3. Configure the database:
@@ -219,7 +219,7 @@ spring.jpa.show-sql=true
 
 Create the database ```parkingdb``` manually in MySQL before running.
 
-**Frontend / UI**
+### Frontend / UI
 - If Tailwind CSS files are already built, the HTML pages in ```src/main/resources/static/``` can be used directly.
 - If you want to modify styles with Tailwind:
 
@@ -254,7 +254,7 @@ http://localhost:8080
 
 ## API Endpoints
 
-**Get Parking Slot Status**
+### Get Parking Slot Status
 ```http
 GET /api/parking/status
 ```
@@ -281,4 +281,55 @@ GET /api/parking/status
 
 ---
 
-## Park a Vehicle
+### Park a Vehicle
+```http
+POST /api/parking/park
+Content-Type: application/json
+```
+
+**Request Body**
+```json
+{
+  "licensePlate": "KA01AB1234",
+  "vehicleType": "CAR"
+}
+```
+
+**Example Success Response**
+```json
+{
+  "message": "Vehicle KA01AB1234 parked in slot S7",
+  "slotId": "S7"
+}
+```
+
+---
+
+### Unpark a Vehicle
+```http
+POST /api/parking/unpark
+Content-Type: application/json
+```
+
+**Request Body**
+```json
+{
+  "licensePlate": "KA01AB1234"
+}
+```
+or
+```json
+{
+  "slotId": "S7"
+}
+```
+**Example Success Response**
+```json
+{
+  "message": "Vehicle KA01AB1234 unparked from slot S7"
+}
+```
+
+---
+
+
