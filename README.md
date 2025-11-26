@@ -332,4 +332,39 @@ or
 
 ---
 
+## Project Structure
+Example structure (adjust based on your actual packages):
 
+```text
+intelligent-parking-system/
+├─ src/
+│  ├─ main/
+│  │  ├─ java/
+│  │  │  └─ com/example/parking/
+│  │  │     ├─ IntelligentParkingSystemApplication.java
+│  │  │     ├─ controller/
+│  │  │     │  └─ ParkingController.java
+│  │  │     ├─ service/
+│  │  │     │  └─ ParkingManager.java
+│  │  │     ├─ model/
+│  │  │     │  ├─ ParkingSlot.java
+│  │  │     │  └─ Vehicle.java
+│  │  │     └─ repository/
+│  │  │        ├─ ParkingSlotRepository.java
+│  │  │        └─ VehicleRepository.java
+│  │  ├─ resources/
+│  │  │  ├─ static/
+│  │  │  │  ├─ index.html
+│  │  │  │  └─ css/ (Tailwind output)
+│  │  │  └─ application.properties
+│  └─ test/
+│     └─ java/
+│        └─ com/example/parking/
+│           └─ IntelligentParkingSystemApplicationTests.java
+└─ docs/
+   └─ er-diagram-intelligent-parking-system.png
+```
+
+------
+
+## How It Works
